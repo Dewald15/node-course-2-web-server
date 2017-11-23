@@ -1,6 +1,7 @@
 const express = require('express');
 const hbs = require('hbs');//by default, nodemon will not watch your handlebar files when you make a change, to fix this run command: nodemon server.js -e js,hbs | the -e flag lets us specify all the extensions we want to watch, in this case: js,hbs 
 const fs = require('fs');
+const port = process.env.PORT || 3000;
 
 var app = express();//The express() function is a top-level function exported by the express module
 
@@ -53,6 +54,6 @@ app.get('/bad', (req, res) => {
     })
 });
 
-app.listen(3000, () => {//second argument is a function which runs when the server is running
-    console.log('Server is up on port 3000')
+app.listen(port, () => {//second argument is a function which runs when the server is running
+    console.log(`Server is up on port ${port}`);
 });
