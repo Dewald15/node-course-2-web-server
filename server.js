@@ -48,6 +48,12 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', { //render will enbale rendering of any templates set up by view engine
+        pageTitle: "Pojects"
+    });
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         error: "Something went wrong"
