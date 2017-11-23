@@ -56,4 +56,4 @@ app.get('/bad', (req, res) => {
 
 app.listen(port, () => {//second argument is a function which runs when the server is running
     console.log(`Server is up on port ${port}`);
-});
+}); 
